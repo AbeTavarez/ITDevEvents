@@ -1,0 +1,7 @@
+
+1- Create a Layout component that will hold all the head info (title, meta, description) and then show the children components.
+
+2- The layout component will be the outmost component that wraps all of the components
+
+3- We create a component file on the components folder and the css file on the styles folder, following the patter Component.module.css 
+
