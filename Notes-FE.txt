@@ -7,3 +7,10 @@
 
 4- @Header component we have an a tag inside of the Link tag, we don't need to do this but if you want to add a class to it you need to add the class to the a tag.
 
+5- You can built your api using the api folder: https://nextjs.org/docs/api-routes/introduction
+    - in the api/events/[slug].js file the code: 
+    const evt = events.filter(ev => ev.slug === slug) -> this will return an array with a single event and slug, we could take it out of the array and return the object as well.
+
+6- Fetching data: 
+    getStaticProps // gets data at built time
+    getServerSideProps // make request every time you go to the page 
