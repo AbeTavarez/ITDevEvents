@@ -5,3 +5,5 @@
 
 3- We create a component file on the components folder and the css file on the styles folder, following the patter Component.module.css 
 
+4- @Header component we have an a tag inside of the Link tag, we don't need to do this but if you want to add a class to it you need to add the class to the a tag.
+
