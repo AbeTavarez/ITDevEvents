@@ -1,13 +1,33 @@
 import {useRouter} from 'next/router'
+import Link from 'next/link'
+import Image from 'next/image'
+import {FaPenAlt, FaPencilAlt, FaTimes} from 'react-icons/fa'
 import Layout from '@/components/Layout';
 import { API_URL } from '@/config/index';
+import styles from '@/styles/Event.module.css'
+
 
 export default function EventPage({evt}) {
   const router = useRouter()
   // console.log(router);
+
+  const deleteEvent = e => {
+    console.log('delete');
+  }
   return (
     <Layout>
-      <h1>{evt.name}</h1>
+      <div className={styles.event}>
+        <div className={styles.controls}>
+            <Link href={`/events/edit/${evt.id}`}>
+              <a>
+                <FaPenAlt /> Edit Event
+              </a>
+            </Link>
+            <a href='#' className={styles.delete} onClick={deleteEvent}>
+              <FaTimes /> Delete Event
+            </a>
+        </div>
+      </div>
       
     </Layout>
   )
